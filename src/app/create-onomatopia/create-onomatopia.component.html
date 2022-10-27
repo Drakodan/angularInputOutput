@@ -1,0 +1,5 @@
+<form #myForm="ngForm" method="submit">
+  <input type="text" [(ngModel)]="newOnomatopia">
+  <p>{{newOnomatopia}}</p>
+  <input type="button" value="send" (click)="onReceiveNewOnomatopia()">
+</form>

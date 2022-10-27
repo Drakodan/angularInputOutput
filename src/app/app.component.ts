@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularInputOutput';
+  title = 'Onomatopia ! (Q8)';
+
+  constructor() { }
+  onomatopiaList: Array<string> = [];
+
+  onReceiveNewOnomatopia(event:any): void {
+    console.log("event : " +event);
+    this.onomatopiaList.push(event);
+  }
 }

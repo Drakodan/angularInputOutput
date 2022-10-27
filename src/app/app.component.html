@@ -1,2 +1,11 @@
 <app-developer></app-developer>
+<h1>Onomatopia (Q8)</h1>
+
+
+<div *ngFor="let truc of onomatopiaList">
+    <p>{{truc}}</p>
+</div>
+
+<router-outlet></router-outlet>
+<app-create-onomatopia (sendOnomatopiaToParent)="onReceiveNewOnomatopia($event)"></app-create-onomatopia>
 <router-outlet></router-outlet>
